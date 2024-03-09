@@ -1,0 +1,64 @@
+---
+import { type Social } from "@/types/social"
+import Github from "@/components/icons/Github.astro"
+import Heart from "@/components/icons/Heart.astro"
+
+
+const socials: Social[] = []
+socials.push({ name: "Linkedin", url: "https://www.linkedin.com/in/david-rosero-calle-1aa6a2126/" })
+socials.push({ name: "Si tienes dudas, escribeme", url: "davidroserocalle@gmail.com" })
+---
+<section>
+    <div>
+        <ul>
+            {
+                socials.map(social => {
+                    if (social.name === "Mail") {
+                        return (
+                            <li>
+                                <a href={`mailto:${social.url}`}>• {social.name}</a>
+                            </li>
+                        )
+                    }
+                    return (
+                        <li>
+                            <a href={social.url}>• {social.name}</a>
+                        </li>
+                    )
+                })
+            }
+        </ul>
+    </div>
+    <div>
+        <Github />
+        <Heart />
+    </div>
+</section>
+
+<style>
+    section {
+        padding-top: 2rem;
+        display: flex;
+        height: 95px;
+    }
+    div {
+        padding-left: 20px;
+        flex: 1;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        list-style: none;
+        padding-inline: 2rem;
+        margin: 0;
+    }
+    a {
+        text-decoration: none;
+        color: #666;
+        transition: color .2s;
+        &:hover {
+            color: #000;
+        }
+    }
+</style>
