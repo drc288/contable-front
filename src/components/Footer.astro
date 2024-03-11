@@ -9,7 +9,7 @@ socials.push({ name: "Linkedin", url: "https://www.linkedin.com/in/david-rosero-
 socials.push({ name: "Si tienes dudas, escribeme", url: "davidroserocalle@gmail.com" })
 ---
 <section>
-    <div>
+    <div class="left">
         <ul>
             {
                 socials.map(social => {
@@ -29,8 +29,8 @@ socials.push({ name: "Si tienes dudas, escribeme", url: "davidroserocalle@gmail.
             }
         </ul>
     </div>
-    <div>
-        <Github />
+    <div class="right">
+        <Github/>
         <Heart />
     </div>
 </section>
@@ -41,9 +41,15 @@ socials.push({ name: "Si tienes dudas, escribeme", url: "davidroserocalle@gmail.
         display: flex;
         height: 95px;
     }
-    div {
-        padding-left: 20px;
+    .left {
+        padding-left: 4rem;
         flex: 1;
+    }
+    .right {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-right: 4rem;
     }
     ul {
         display: flex;

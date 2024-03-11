@@ -1,10 +1,22 @@
 ---
 import Layout from '@/layouts/Layout.astro';
+import Header from '@/components/Header.astro';
+import Body from '@/components/landing/Body.astro';
+import Footer from '@/components/Footer.astro';
 ---
 
-<Layout title="login">
-  <h1>Welcome to Astro</h1>
-  <p>
-    Astro is a new kind of static site builder that delivers lightning-fast performance and modern developer ergonomics.
-  </p>
+<Layout title="Login">
+  <main>
+    <Header />
+
+    <Footer />
+  </main>
 </Layout>
+
+<style>
+  main {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+</style>
