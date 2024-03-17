@@ -42,6 +42,15 @@ socials.push({ name: "Si tienes dudas, escribeme", url: "davidroserocalle@gmail.
         padding-top: 2rem;
         display: flex;
         height: 95px;
+        justify-content: space-between;
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+            height: 150px;
+            .right {
+                display: none;
+            }
+        }
     }
     .left {
         padding-left: 4rem;
