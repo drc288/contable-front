@@ -1,17 +1,17 @@
 ---
-
+import Button from '@/components/buttons/Button.astro'
 ---
 <section>
     <div class="landing">
         <header>
             <div class="left">
-                <h1>Que es contable?</h1>
+                <h1>¿Que es contable?</h1>
                 <p>
                     Es una herramienta en la cual te puedes apoyar para manejar tu contabilidad personal, con el fin de que en un futuro tengas un mejor control!!!
                 </p>
                 <div class="bottons">
-                    <a href="/auth/login" class="btn btn-primary">Iniciar Sesion</a>
-                    <a href="/auth/register" class="btn btn-primary">Registrarse</a>
+                    <Button href="/auth/login" buttonText="Iniciar Sesion" />
+                    <Button href="/auth/register" buttonText="Registrarse" />
                 </div>
             </div>
         </header>
@@ -52,7 +52,7 @@
         align-items: center;
         display: inline-flex;
         min-width: 430px;
-        @media (max-width: 1120px) {
+        @media (max-width: 1300px) {
             height: 700px;
             flex-direction: column;
         }
@@ -78,7 +78,7 @@
     footer {
         width: 100%;
         height: 100%;
-        @media (max-width: 1120px){
+        @media (max-width: 1300px){
             display: none;
         }
     }
@@ -88,37 +88,23 @@
         align-items: center;
         width: 100%;
         height: 100%;
-        @media (max-width: 1120px){
+        @media (max-width: 1300px){
             display: none;
         }
     }
     img {
         width: 500px;
         height: 500px;
-        @media (max-width: 1120px){
+        @media (max-width: 1300px){
             width: 300px;
             height: 300px;
-        }
-    }
-    a {
-        color: white;
-        padding-inline: 35px;
-        padding-block: 10px;
-        background: #AA9CC1;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 10px;
-        justify-content: center;
-        font-size: 20px;
-        transition: background .2s;
-        &:hover {
-            background: #8E7CB3;
         }
     }
     .bottons {
         display: flex;
         height: 40px;
         gap: 2rem;
-        @media (max-width: 1120px){
+        @media (max-width: 1300px){
             flex-direction: column;
             gap: 1rem;
         }
