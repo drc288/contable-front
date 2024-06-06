@@ -5,6 +5,8 @@ dist/
 .astro/
 .idea/
 .vscode/
+.idx/
+
 
 # dependencies
 node_modules/
